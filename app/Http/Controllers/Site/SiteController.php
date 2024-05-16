@@ -13,64 +13,59 @@ class SiteController extends Controller
         return view('site.principal.home');
     }
 
-    public function aboutHistory(): View
+    public function aboutGroup(): View
     {
-        return view('site.about.history');
+        return view('site.about.group');
     }
 
-    public function aboutOrgChart(): View
+    public function aboutCases(): View
     {
-        return view('site.about.orgchart');
+        return view('site.about.cases');
     }
 
-    public function aboutProjects(): View
+    public function aboutAwards(): View
     {
-        return view('site.about.projects');
+        return view('site.about.awards');
     }
 
-    public function aboutPartners(): View
+    public function aboutVideos(): View
     {
-        return view('site.about.partners');
+        return view('site.about.videos');
     }
 
-    public function elementarySchool(): View
+    public function aboutPrivacyPolicy(): View
     {
-        return view('site.lessons.elementary');
+        return view('site.about.privacypolicy');
     }
 
-    public function highSchool(): View
+    public function solutionsIptv(): View
     {
-        return view('site.lessons.highschool');
+        return view('site.solutions.platform-iptv');
     }
 
-    public function adultElementaryEducation(): View
+    public function solutionsWhitelabel(): View
     {
-        return view('site.lessons.adult.elementary');
+        return view('site.solutions.whitelabel');
     }
 
-    public function adultHighEducation(): View
+    public function solutionsAva(): View
     {
-        return view('site.lessons.adult.highschool');
+        return view('site.solutions.platform-ava');
     }
 
-    public function stayinEvents(): View
+    public function solutionsStudioPack(): View
     {
-        return view('site.stayin.events');
+        return view('site.solutions.studio-pack');
     }
 
-    public function stayinNews(): View
+    public function producer(): View
     {
-        return view('site.stayin.news');
+        return view('site.producer.home');
     }
 
-    public function stayinPublications(): View
+    public function compliance(): View
     {
-        return view('site.stayin.publications');
-    }
-
-    public function awards(): View
-    {
-        return view('site.awards.awards');
+        return view('site.compliance.home');
     }
 
     public function contact(): View

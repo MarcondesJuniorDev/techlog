@@ -1,9 +1,9 @@
 <div class="bg-white w-full dark:bg-gray-800 overflow-hidden shadow-xl">
     <div class="p-2 sm:px-10 sm:py-8">
-        <h1 class="text-2xl font-semibold text-gray-900 dark:text-white text-center">
-            {{ __('Big Numbers') }}
+        <h1 class="text-2xl font-semibold text-gray-900 dark:text-white text-center space-y-4">
+            Nossos Números
         </h1>
-        <div class="flex justify-evenly items-center h-full">
+        <div class="flex justify-evenly items-center h-full space-y-4">
             <div class="flex flex-col items-center">
                 <div id="employees" class="text-4xl text-gray-500 dark:text-gray-400 font-bold"></div>
                 <div class="text-sm font-semibold text-gray-500 dark:text-gray-400">{{ __('Employees') }}</div>

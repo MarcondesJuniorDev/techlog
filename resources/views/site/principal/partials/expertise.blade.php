@@ -1,9 +1,9 @@
 <div class="bg-white w-max-screen-2xl dark:bg-gray-800 overflow-hidden shadow-xl">
     <div class="p-2 sm:px-10 sm:py-8">
         <h1 class="text-2xl font-semibold text-gray-900 dark:text-white text-center">
-            {{ __('Awards') }}
+            Áreas de atuação
         </h1>
-        <div class="swiper w-full h-96" id="swiper-awards">
+        <div class="swiper max-w-7xl h-96" id="swiper-awards">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -17,15 +17,6 @@
                 <div class="swiper-slide bg-pink-500">Slide 8</div>
                 <div class="swiper-slide bg-gray-500">Slide 9</div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
         </div>
     </div>
 </div>
@@ -37,18 +28,14 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const swiper4 = new Swiper('#swiper-awards', {
-            spaceBetween: 30,
+            spaceBetween: 20,
             autoplay: {
-                delay: 2500,
+                delay: 5000,
             },
             pagination: {
                 el: '.swiper-pagination',
                 type: "progressbar",
                 clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
             },
             scrollbar: {
                 el: '.swiper-scrollbar',

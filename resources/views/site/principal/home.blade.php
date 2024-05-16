@@ -1,13 +1,25 @@
 <x-site-layout>
     <div class="py-4">
-        @include('site.principal.partials.banners')
-        <hr>
-        @include('site.principal.partials.news')
-        <hr>
+        @include('site.principal.partials.posts')
+    </div>
+
+    <div class="py-4">
+        @include('site.principal.partials.description-group')
+    </div>
+
+    <div class="py-4">
         @include('site.principal.partials.numbers')
-        <hr>
-        @include('site.principal.partials.awards')
-        <hr>
-        @include('site.principal.partials.projects')
+    </div>
+
+    <div class="py-4">
+        @include('site.principal.partials.expertise')
+    </div>
+
+    <div class="py-4">
+        @include('site.principal.partials.card-users')
+    </div>
+
+    <div class="py-4">
+        @include('site.principal.partials.contact-us')
     </div>
 </x-site-layout>

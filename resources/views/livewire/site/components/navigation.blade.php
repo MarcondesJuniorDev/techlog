@@ -5,17 +5,7 @@
             <!-- Logo -->
             <div class="shrink-0 flex items-center space-x-2">
                 <div>
-                    <a href="{{ route('admin.dashboard') }}">
-                        <x-application-mark class="block h-9 w-auto" />
-                    </a>
-                </div>
-                <div>
-                    <a href="{{ route('admin.dashboard') }}">
-                        <x-application-mark class="block h-9 w-auto" />
-                    </a>
-                </div>
-                <div>
-                    <a href="{{ route('admin.dashboard') }}">
+                    <a href="{{ route('site.home') }}">
                         <x-application-mark class="block h-9 w-auto" />
                     </a>
                 </div>
@@ -30,7 +20,7 @@
                     <x-dropdown align="center" width="48">
                         <x-slot name="trigger">
                             <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-                                <div>{{ __('Quem Somos') }}</div>
+                                <div>{{ __('Sobre') }}</div>
                                 <div class="ml-1">
                                     <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -40,20 +30,24 @@
                         </x-slot>
 
                         <x-slot name="content">
-                            <x-dropdown-link href="{{ route('about.history') }}">
-                                {{ __('Histórico') }}
+                            <x-dropdown-link href="{{ route('about.group') }}">
+                                {{ __('Grupo VAT') }}
                             </x-dropdown-link>
 
-                            <x-dropdown-link href="{{ route('about.orgchart') }}">
-                                {{ __('Organograma') }}
+                            <x-dropdown-link href="{{ route('about.cases') }}">
+                                {{ __('Cases') }}
                             </x-dropdown-link>
 
-                            <x-dropdown-link href="{{ route('about.projects') }}">
-                                {{ __('Projetos') }}
+                            <x-dropdown-link href="{{ route('about.awards') }}">
+                                {{ __('Prêmios') }}
                             </x-dropdown-link>
 
-                            <x-dropdown-link href="{{ route('about.partners') }}" @click="isActive = true">
-                                {{ __('Parcerias') }}
+                            <x-dropdown-link href="{{ route('about.videos') }}">
+                                {{ __('Vídeos') }}
+                            </x-dropdown-link>
+
+                            <x-dropdown-link href="{{ route('about.privacypolicy') }}">
+                                {{ __('Política de Privacidade') }}
                             </x-dropdown-link>
                         </x-slot>
                     </x-dropdown>
@@ -62,7 +56,7 @@
                     <x-dropdown align="center" width="48">
                         <x-slot name="trigger">
                             <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-                                <div>{{ __('Aulas') }}</div>
+                                <div>{{ __('Soluções') }}</div>
                                 <div class="ml-1">
                                     <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -72,56 +66,31 @@
                         </x-slot>
 
                         <x-slot name="content">
-                            <x-dropdown-link href="{{ route('lessons.elementary') }}">
-                                {{ __('Ensino Fundamental') }}
+                            <x-dropdown-link href="{{ route('solutions.platform-iptv') }}">
+                                {{ __('Plataforma IPTV') }}
                             </x-dropdown-link>
 
-                            <x-dropdown-link href="{{ route('lessons.adult.elementary') }}">
-                                {{ __('Ensino Fundamental - EJA') }}
+                            <x-dropdown-link href="{{ route('solutions.whitelabel') }}">
+                                {{ __('WhiteLabel') }}
                             </x-dropdown-link>
 
-                            <x-dropdown-link href="{{ route('lessons.highschool') }}">
-                                {{ __('Ensino Médio') }}
+                            <x-dropdown-link href="{{ route('solutions.platform-ava') }}">
+                                {{ __('Plataforma AVA') }}
                             </x-dropdown-link>
 
-                            <x-dropdown-link href="{{ route('lessons.adult.highschool') }}">
-                                {{ __('Ensino Médio - EJA') }}
+                            <x-dropdown-link href="{{ route('solutions.studiopack') }}">
+                                {{ __('Studio PACK') }}
                             </x-dropdown-link>
                         </x-slot>
                     </x-dropdown>
                 </div>
-                <div class="hidden items-center space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-dropdown align="center" width="48">
-                        <x-slot name="trigger">
-                            <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
-                                <div>{{ __('Atualizações') }}</div>
-                                <div class="ml-1">
-                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                                    </svg>
-                                </div>
-                            </button>
-                        </x-slot>
-
-                        <x-slot name="content">
-                            <x-dropdown-link href="{{ route('stayin.events') }}">
-                                {{ __('Eventos') }}
-                            </x-dropdown-link>
-
-                            <x-dropdown-link href="{{ route('stayin.news') }}">
-                                {{ __('Notícias') }}
-                            </x-dropdown-link>
-
-                            <x-dropdown-link href="{{ route('stayin.publications') }}">
-                                {{ __('Publicações') }}
-                            </x-dropdown-link>
-                        </x-slot>
-                    </x-dropdown>
-                </div>
-                <x-nav-link href="{{ route('awards') }}" :active="request()->routeIs('awards')">
-                    {{ __('Premiações') }}
+                <x-nav-link href="{{ route('producer.home') }}" :active="request()->routeIs('producer.home')">
+                    {{ __('Produtora') }}
                 </x-nav-link>
-                <x-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
+                <x-nav-link href="{{ route('compliance.home') }}" :active="request()->routeIs('compliance.home')">
+                    {{ __('Compliance') }}
+                </x-nav-link>
+                <x-nav-link href="{{ route('contact.home') }}" :active="request()->routeIs('contact.home')">
                     {{ __('Fale Conosco') }}
                 </x-nav-link>
             </div>
@@ -214,8 +183,23 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden lg:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link href="{{ route('admin.dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+            <x-responsive-nav-link href="{{ route('site.home') }}" :active="request()->routeIs('site.home')">
+                {{ __('Início') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('about.group') }}" :active="request()->routeIs('about.group')">
+                {{ __('Sobre') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('solutions.platform-iptv') }}" :active="request()->routeIs('solutions.platform-iptv')">
+                {{ __('Soluções') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('producer.home') }}" :active="request()->routeIs('producer.home')">
+                {{ __('Produtora') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('compliance.home') }}" :active="request()->routeIs('compliance.home')">
+                {{ __('Compliance') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('contact.home') }}" :active="request()->routeIs('contact.home')">
+                {{ __('Fale Conosco') }}
             </x-responsive-nav-link>
         </div>
 
